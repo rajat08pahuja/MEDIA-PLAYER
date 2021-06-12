@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player</title>
+    <link rel="icon" href="./media/MX-player-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/left-panel.css">
+    <link rel="stylesheet" href="./style/main-panel.css">
+    <link rel="stylesheet" href="./style/bottom-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="left-panel">
+        <div class="left-btns-container">
+            <div class="upper-btns-container">
+                <div class="upper-btn home-btn" style="position: relative;">
+                    <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                            fill="currentColor"></path>
+                    </svg>
+                    Open
+                    <input type="file" class="home-btn-input-receiver" style="position: absolute; opacity: 0;">
+                </div>
+                <div class="upper-btn open-library-btn">
+                    <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                            fill="currentColor"></path>
+                    </svg>
+                    Your Library
+                </div>
+            </div>
+            <div class="lower-btns-container">
+                <div class="lower-btn create-playlist-btn">
+                    <svg role="img" height="20" width="20" viewBox="0 0 16 16"
+                        style="fill: black; background-color:white ">
+                        <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                        <path fill="none" d="M0 0h16v16H0z"></path>
+                    </svg>
+                    Add To Your Playlist
+                </div>
+                <div class="lower-btn liked-songs-btn">
+                    <svg role="img" height="20" width="20" viewBox="0 0 16 16"
+                        style="fill: white; background:linear-gradient(135deg,#450af5,#c4efd9); ">
+                        <path fill="none" d="M0 0h16v16H0z"></path>
+                        <path
+                            d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
+                        </path>
+                    </svg>
+                    Liked Songs
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="main-video" style="display: none;">
+            <video src="" class="video-element" style="display: none;"></video>
+        </div>
+        <div class="main-audio" style="display: none;">
+            <div class="audio-card">
+                <div class="audio-card-image">
+                    <svg height="32" role="img" width="32" viewBox="-20 -25 100 100"
+                        class="_0de6546a8c9a0ed2cc34a83aa2c4a47a-scss beabeff74fb6ea16fdd40b8a78d9aeda-scss"
+                        aria-hidden="true" data-testid="card-image-fallback">
+                        <path
+                            d="M16 7.494v28.362A8.986 8.986 0 0 0 9 32.5c-4.962 0-9 4.038-9 9s4.038 9 9 9 9-4.038 9-9V9.113l30-6.378v27.031a8.983 8.983 0 0 0-7-3.356c-4.962 0-9 4.038-9 9 0 4.963 4.038 9 9 9s9-4.037 9-9V.266L16 7.494zM9 48.5c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7c0 3.859-3.141 7-7 7zm32-6.09c-3.86 0-7-3.14-7-7 0-3.859 3.14-7 7-7s7 3.141 7 7c0 3.861-3.141 7-7 7z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div class="audio-card-title">Sample Song</div>
+            </div>
+        </div>
+        <div class="main-btns">
+            <div class="main-btn">
+                <i class="fas fa-expand-arrows-alt" style="font-size: xx-large; color: whitesmoke;"></i>
+            </div>
+        </div>
+        <div class="liked-video-playlists" style="display: none;">
+            <div class="liked-videos-titlebar">
+                <div class="image-section">
+                    <img src="https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png">
+                </div>
+                <div class="text-section">
+                    <div style="font-size: 30px; font-weight: 650;">PLAYLIST</div>
+                    <div style="font-size: 70px; font-weight: 750;">Liked Songs</div>
+                </div>
+            </div>
+            <div class="play-all-btn-element">
+                <button class="play-all-btn">
+                    <svg height="28" role="img" width="28" viewBox="0 0 24 24" aria-hidden="true">
+                        <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="liked-songs-list">
+                <div class="table-row heading">
+                    <div class="table-row-element sno-heading">#</div>
+                    <div class="table-row-element title-heading">TITLE</div>
+                    <div class="table-row-element date-heading">DATE ADDED</div>
+                    <div class="table-row-element duration-heading">DURATION</div>
+                </div>
+            </div>
+        </div>
+        <div class="create-playlists-page" style="display: none;">
+            <div class="create-playlist-titlebar">
+                <div class="playlist-image-section">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="playlist-text-section">
+                    <div style="font-size: 30px; font-weight: 650;">PLAYLIST</div>
+                    <div style="font-size: 70px; font-weight: 750;">My PlayList</div>
+                </div>
+            </div>
+            <div class="play-all-btn-element">
+                <button class="play-all-btn">
+                    <svg height="28" role="img" width="28" viewBox="0 0 24 24" aria-hidden="true">
+                        <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="playlist-songs-list">
+                <div class="table-row heading">
+                    <div class="table-row-element sno-heading">#</div>
+                    <div class="table-row-element title-heading">TITLE</div>
+                    <div class="table-row-element date-heading">DATE ADDED</div>
+                    <div class="table-row-element duration-heading">DURATION</div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="bottom-panel">
+        <div class="song-info-container">
+            <div class="media-icon">
+                <i class="fas fa-music" class="media-icon-img"></i>
+            </div>
+            <div class="media-metadata">
+                <div class="media-name">Sample Song</div>
+            </div>
+            <div class="like-icon"><svg role="img" height="16" width="16" viewBox="0 0 16 16" class="like-icon-svg">
+                    <path fill="none" d="M0 0h16v16H0z"></path>
+                    <path
+                        d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
+                    </path>
+                </svg></div>
+        </div>
+        <div class="controls-container">
+            <div class="control-btns">
+                <div class="media-btns-container">
+                    <div class="media-btn shuffle-btn">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="control-btn-svg">
+                            <path
+                                d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="media-btn backward-btn">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="control-btn-svg">
+                            <path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"></path>
+                        </svg>
+                    </div>
+                    <div class="media-btn play-btn">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="control-btn-svg">
+                            <path d="M4.018 14L14.41 8 4.018 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="media-btn forward-btn">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="control-btn-svg">
+                            <path d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"></path>
+                        </svg>
+                    </div>
+                    <div class="media-btn repeat-btn">
+                        <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="control-btn-svg">
+                            <path
+                                d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="media-btn playback-speed">
+                        <select class="playback-dropdown">
+                            <option value="0.25">0.25X</option>
+                            <option value="0.5">0.5X</option>
+                            <option value="0.75">0.75X</option>
+                            <option value="1" selected>1X</option>
+                            <option value="1.25">1.25X</option>
+                            <option value="1.5">1.5X</option>
+                            <option value="1.75">1.75X</option>
+                            <option value="2">2X</option>
+                        </select>
+                    </div>
+                    <div class="media-btn fullscreen-btn">
+                        <i class="fas fa-expand" style="font-size: x-large;"></i>
+                    </div>
+                </div>
+                <div class="media-timeline-container">
+                    <div class="completed-timing">00:00:00</div>
+                    <div class="progress-bar">
+                        <input type="range" class="progress-slider slider" min="0" max="100" value="0">
+                    </div>
+                    <div class="total-timing">00:00:00</div>
+                </div>
+            </div>
+            <div class="media-volume-container">
+                <div class="volume-icon">
+                    <svg role="presentation" height="16" width="16" aria-label="Volume high" id="volume-icon"
+                        viewBox="0 0 16 16" class="control-btn-svg">
+                        <path
+                            d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="volume-slider">
+                    <input type="range" class="vol-slider-ele slider" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+    <script>
+        var uid = new ShortUniqueId();
+    </script>
+    <script src="./script/generic.js"></script>
+    <script src="./script/openFile.js"></script>
+    <script src="./script/like.js"></script>
+    <script src="./script/playlists.js"></script>
+</body>
+
+</html>

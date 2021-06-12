@@ -1,0 +1,262 @@
+.bottom-panel{
+    width: 100vw;
+    height: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+}
+
+.song-info-container{
+    height: 100%;
+    width: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.media-icon{
+    height: 50%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+}
+
+.media-metadata{
+    height: 40%;
+    width: 60%;
+}
+
+
+.media-name{
+    height: 100%;
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.like-icon{
+    height: 25%;
+    width: 10%;
+}
+
+.like-icon-svg{
+    height: 100%;
+    width: 100%;
+    fill: white;
+}
+
+.controls-container{
+    height: 100%;
+    width: calc(100% - 15rem);
+    display: flex;
+}
+
+.control-btns{
+    height: 100%;
+    width: 80%;
+}
+
+.media-btns-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.media-btn{
+    height: 50%;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-btn:hover{
+    background-color: #282828;
+}
+
+.playback-speed{
+    width: 4rem;
+}
+
+.playback-dropdown{
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+
+option{
+    color: black;
+}
+
+.control-btn-svg{
+    height: 100%;
+    width: 100%;
+    fill: white;
+}
+
+.media-volume-container{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.volume-icon{
+    height: 50%;
+    width: 25%;
+}
+
+.volume-slider{
+    height: 20%;
+    width: 65%;
+}
+
+.vol-slider-ele{
+    height: 100%;
+    width: 100%;
+}
+
+.media-timeline-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.completed-timing{
+    height: 40%;
+    width: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-bar{
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 25rem;
+}
+
+.progress-slider{
+    height: 100%;
+    width: 100%;
+}
+
+
+.slider {
+    width: 100%;
+    height: 20%;
+    -webkit-appearance: none;
+    background: #b3b3b3;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1db954;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #1db954;
+  }
+.total-timing{  
+    height: 40%;
+    width: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px) and (min-width: 650px) {
+    .playlist-image-section>*{
+        font-size: 75px;
+    }
+    .table-row-element{
+        font-size: small;
+    }
+  }
+
+@media screen and (max-width: 650px) {
+    .playlist-image-section>*{
+        font-size: 75px;
+    }
+    .table-row-element{
+        font-size: small;
+    }
+    .left-panel{
+        height: 7.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: calc(100vh - 15rem);
+    }
+    .left-btns-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .lower-btns-container{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .lower-btn{
+        width: 50%;
+    }
+    .upper-btns-container{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .upper-btn{
+        width: 50%;
+    }
+    .home-btn-input-receiver{
+        height: 100%;
+        width: 100%;
+    }
+    .main-panel{
+        height: calc(100vh - 15rem);
+        width: 100%;
+        top: 7.5rem;
+        left: 0;
+    }
+    .song-info-container{
+        height: 30%;
+        width: 100%;
+    }
+    .controls-container{
+        height: 70%;
+        width: 100%;
+    }
+    .control-btns{
+        height: 70%;
+    }
+    .media-icon{
+        height: 90%;
+        width: 10%;
+    }
+    .like-icon{
+        height: 100%;
+    }
+    
+  }
